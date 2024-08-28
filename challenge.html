@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style/challenge.css">
+
+</head>
+<body class="body">
+
+    <header class="header">
+        <img id="logoAlura" src="./assets/Logo.png" alt="Logo Alura">
+    </header>
+
+    <main class="presentacion">   
+        <section class="presentacion__input">
+                <div class="presentacion_texto_usuario">                    
+                <textarea type="text" id="textoUsuario" oninput="convertirAMinusculas()" class= "texto__usuario" placeholder="Ingrese el texto aquí"></textarea>            
+            </div>
+            <div class="presentacion_advertencia">
+                <img src="./assets/Group.png" class="simbolo__advertencia">
+                <p class="advertencia">Solo letras minúsculas sin acento</p>          
+            </div>
+            <div class="botones">    
+                <button onclick = "encriptarTexto()" class="boton__encriptar">Encriptar</button>
+                <button onclick = "desencriptarTexto()"class="boton__desencriptar">Desencriptar</button>
+            </div>
+        </section> 
+        <section class="presentacion_texto_salida">
+            <img id="imagenVectorizada" src="./assets/Vector.png" alt="imagen vectorizada">
+            <div id= "textoDeSalida" class="texto__salida"></div> 
+            <p id= "ningunTexto" class="ningun_texto"> Ningún mensaje fue encontrado</p>
+            <p id= "ingresaElTexto"class="ingresa_el_texto"> Ingresa el texto que desees encriptar o desencriptar.</p>    
+            <button onclick="copiarTexto()"  id="botonCopiar" class="boton__copiar" style ="display:none">Copiar</button>
+        </section >
+        <script src="challenge.js"></script>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+</html>
